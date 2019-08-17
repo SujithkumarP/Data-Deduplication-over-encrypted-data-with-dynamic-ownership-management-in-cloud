@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main()
+{
+
+    char a[100];
+    int x,y,j,i=0,w=0,m=0;
+    fgets(a,99,stdin);
+    scanf("%d %d",&x,&y);
+    printf("%d %d\n",x,y);
+
+    while(a[i]!='\0')
+    {
+
+        j=a[i]-'0';
+
+        if(j%2==0)
+           w+=y;
+        else
+            m+=x;
+
+            i+=2;
+    }
+
+    printf("%d",m-w);
+    return 0;
+
+}
